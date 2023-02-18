@@ -1,1 +1,16 @@
 
+name: Github action part
+on:
+ push:
+  branches: [main]
+job:
+ build:
+  runs-on: ubuntu-latest
+  steps:
+   - uses: actions/checkout@v3
+   - name: Print node version
+     run: node --version
+   - name: Print NPM version
+     run: npm --version
+   - name: Print pwd
+     run: pwd
